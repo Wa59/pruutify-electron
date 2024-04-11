@@ -1,0 +1,46 @@
+{
+  "name": "pruutify2000",
+  "version": "1.0.0",
+  "description": "A minimal MP3 Player",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack-win": "electron-builder build --win",
+    "pack-linux": "electron-builder build --linux"
+  },
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "pruutify2000"
+  ],
+  "author": "GitHub",
+  "build": {
+    "appId": "com.wa59.pruutify2000",
+    "files": [
+      "*.js",
+      "*.png"
+    ],
+    "directories": {
+      "output": "./dist",
+      "buildResources": "."
+    },
+    "productName": "pruutify2000",
+    "nsis": {
+      "artifactName": "pruutify.${version}.${ext}",
+      "uninstallDisplayName": "pruutify2000"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "./icon.ico"
+    },
+    "linux": {
+      "target": "appimage",
+      "icon": "./icon.png"
+    }
+  },
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "9.1.2",
+    "electron-builder": "^22.9.1"
+  }
+}
